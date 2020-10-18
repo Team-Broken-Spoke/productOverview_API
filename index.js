@@ -6,3 +6,8 @@ const port = 3003;
 app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`)
 });
+
+
+
+//queries for mongo
+// db.product.find({})
