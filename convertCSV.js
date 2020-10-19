@@ -18,6 +18,11 @@ const fs = require('fs');
 //convert photos
 
 //convert skus
-let writeStream = fs.createWriteStream('../skusData.json');
-let readStream = fs.createReadStream('../skus.csv');
+// let writeStream = fs.createWriteStream('../skusData.json');
+// let readStream = fs.createReadStream('../skus.csv');
+// readStream.pipe(csv({downstreamFormat: 'array'})).pipe(writeStream);
+
+//convert photos
+let writeStream = fs.createWriteStream('../photosData.json');
+let readStream = fs.createReadStream('../photos.csv');
 readStream.pipe(csv({downstreamFormat: 'array'})).pipe(writeStream);
