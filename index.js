@@ -3,8 +3,6 @@ const app = express();
 const port = 3003;
 const { MongoClient } = require('mongodb');
 const url = "mongodb://localhost:27017";
-//have to import the queries
-// const queries = require('./queries');
 
 app.use(express.json());
 
@@ -67,7 +65,7 @@ MongoClient
   });
 
   app.get('/photos/:productId', (req, res) => {
-    const collection = db.collection('features');
+    const collection = db.collection('photos');
     collection.findOne({productId: req.params.productId})
       .then((response) => {
         res.send(response)
